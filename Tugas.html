@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    fieldset {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo Kampus -->
+    <img src="logo_stitek.jpg" alt="Logo STITEK" class="logo">
+
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+    <form action="#" method="post">
+      
+      <!-- Data Pribadi -->
+      <fieldset>
+        <legend>Data Pribadi</legend>
+        
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Contoh: Andi Wijaya" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Contoh: andi@email.com" required>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+        <label for="pria" style="display:inline;">Pria</label>
+        <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
+        <label for="wanita" style="display:inline;">Wanita</label>
+
+        <label for="alamat">Alamat Lengkap:</label>
+        <textarea id="alamat" name="alamat" placeholder="Contoh: Jl. Merdeka No. 10, Bandung"></textarea>
+      </fieldset>
+
+      <!-- Hobi -->
+      <fieldset>
+        <legend>Hobi</legend>
+        <label><input type="checkbox" id="membaca" name="hobi" value="Membaca"> Membaca</label>
+        <label><input type="checkbox" id="olahraga" name="hobi" value="Olahraga"> Olahraga</label>
+        <label><input type="checkbox" id="musik" name="hobi" value="Musik"> Musik</label>
+      </fieldset>
+
+      <!-- Jurusan -->
+      <fieldset>
+        <legend>Pilihan Jurusan</legend>
+        <label for="jurusan">Pilih Jurusan:</label>
+        <select id="jurusan" name="jurusan" required>
+          <option value="">-- Pilih Jurusan --</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Manajemen">Manajemen</option>
+          <option value="Akuntansi">Akuntansi</option>
+        </select>
+      </fieldset>
+
+      <input type="submit" value="Daftar">
+    </form>
+  </div>
+</body>
+</html>
